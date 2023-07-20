@@ -1,0 +1,86 @@
+header {
+    margin-top: 25px;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .profil {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .gamertag {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .gamerscore {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            svg {
+                margin-bottom: 4px;
+            }
+        }
+    }
+    .gamerpic {
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        position: relative;
+
+        img {
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+        }
+
+        &::after {
+            position: absolute;
+            height: 65px;
+            width: 65px;
+            border-radius: 50%;
+            border: transparent 3px solid;
+            content: '';
+            left: -5px;
+            top: -5px;
+            box-shadow: 0 0 10px 0 transparent;
+            transition: all 0.3s ease-in;
+        }
+
+        &:hover::after {
+            display: block;
+            border: var(--color-primary) 3px solid;
+            box-shadow: 0 0 10px 0 var(--color-primary);
+        }
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            align-items: center;
+            gap: 30px;
+
+            li {
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 0.3);
+                padding: 10px;
+            }
+        }
+    }
+
+    .autres {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        h5 {
+            letter-spacing: 3.5px;
+        }
+    }
+}
