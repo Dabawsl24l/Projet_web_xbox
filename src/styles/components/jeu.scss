@@ -41,11 +41,17 @@
         }
 
         .content__jeu {
-            padding: 10px;
+            padding: 20px 10px;
             position: absolute;
+            transform-origin: bottom;
             bottom: 0;
             left: 0;
             opacity: 0;
+            background-color: rgba(0, 0, 0, 0.55);
+            width: 100%;
+            border-radius: 0 0 15px 15px;
+            transform: scaleY(0.51756);
+            transition: opacity 0.2s ease-in;
         }
 
         &:focus,
@@ -53,6 +59,11 @@
             transform: scaleY(1.93333);
             width: 290px;
             overflow: hidden;
+            .content__jeu {
+                opacity: 1;
+                transition: opacity 0.2s ease-in;
+                transition-delay: 0.2s;
+            }
         }
     }
 }
@@ -71,7 +82,7 @@
         left: 0px;
         box-shadow: 0 0 10px 0 transparent;
         opacity: 0;
-        transition: all 0.3s ease-in;
+        transition: all 0.4s ease-in;
         pointer-events: none;
     }
 
@@ -88,8 +99,8 @@
         transition: all 0.3s ease-in;
     }
 
-    &:not(:hover) {
-        transition: all 0.3s ease-in;
+    &:not(:hover)::after {
+        transition: opacity 0.2s ease-in;
     }
 }
 
