@@ -5,9 +5,4 @@
 .wrapper {
     max-width: 1256px;
     margin-inline: auto;
-    padding: 0 var(--spacing-md);
-}
-
-section + section {
-    margin-top: var(--spacing-md);
 }

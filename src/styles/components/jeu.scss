@@ -1,0 +1,98 @@
+.cards__jeux {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .card__jeu {
+        height: 150px;
+        width: 150px;
+        position: relative;
+        transform-origin: bottom left;
+        transition: all 0.3s ease-in;
+
+        .media__jeu {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 15px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+                display: block;
+                border-radius: 15px;
+            }
+
+            .anno {
+                object-position: 45% 0%;
+            }
+
+            .fifa {
+                object-position: 0% 20%;
+            }
+
+            .assassin {
+                object-position: 0% 10%;
+            }
+
+            .nhl {
+                object-position: 80% 0%;
+            }
+        }
+
+        .content__jeu {
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        &:focus,
+        &:hover {
+            transform: scaleY(1.93333);
+            width: 290px;
+            overflow: hidden;
+        }
+    }
+}
+
+.jeu__hover {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border: transparent 6px solid;
+        border-radius: 15px;
+        content: '';
+        top: 0px;
+        left: 0px;
+        box-shadow: 0 0 10px 0 transparent;
+        opacity: 0;
+        transition: all 0.3s ease-in;
+        pointer-events: none;
+    }
+
+    &:focus::after,
+    &:hover::after {
+        opacity: 1;
+        border: var(--color-primary) 6px solid;
+        box-shadow: 0 0 10px 0 var(--color-primary);
+        pointer-events: none;
+        width: 305px;
+        height: 305px;
+        top: -148px;
+        left: -8px;
+        transition: all 0.3s ease-in;
+    }
+
+    &:not(:hover) {
+        transition: all 0.3s ease-in;
+    }
+}
+
+.jeu {
+    margin-top: 350px;
+}

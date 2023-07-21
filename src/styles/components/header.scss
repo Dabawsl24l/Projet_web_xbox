@@ -48,9 +48,9 @@ header {
             left: -5px;
             top: -5px;
             box-shadow: 0 0 10px 0 transparent;
-            transition: all 0.3s ease-in;
+            transition: all 0.4s ease-in;
         }
-
+        &:focus::after,
         &:hover::after {
             display: block;
             border: var(--color-primary) 3px solid;
@@ -68,25 +68,31 @@ header {
 
             li {
                 border-radius: 50%;
-                background: rgba(0, 0, 0, 0.3);
                 padding: 10px;
                 position: relative;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                transition: all 0.4s ease-in;
 
                 .stroke {
-                    align-items: center;
+                    height: 30px;
+                    width: 30px;
                     transition: all 0.4s ease-in;
                 }
 
                 .fill {
                     position: absolute;
-                    top: 7px;
-                    left: 8px;
-                    width: 70%;
-                    height: 70%;
+                    top: 12px;
+                    left: 12px;
                     opacity: 0;
+                    height: 35px;
+                    width: 35px;
                     transition: all 0.4s ease-in;
                 }
-
+                &:focus,
                 &:hover {
                     .fill {
                         opacity: 1;
@@ -95,6 +101,42 @@ header {
                     .stroke {
                         opacity: 0;
                     }
+                }
+
+                &::before {
+                    position: absolute;
+                    inset: 0;
+                    content: '';
+                    background: rgba(0, 0, 0, 0.3);
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    z-index: -1;
+                    transition: all 0.4s ease-in;
+                }
+
+                &:hover::before {
+                    height: 60px;
+                    width: 60px;
+                }
+
+                &::after {
+                    position: absolute;
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 50%;
+                    border: transparent 3px solid;
+                    content: '';
+                    left: -5px;
+                    top: -5px;
+                    box-shadow: 0 0 10px 0 transparent;
+                    transition: all 0.4s ease-in;
+                }
+                &:focus::after,
+                &:hover::after {
+                    display: block;
+                    border: var(--color-primary) 3px solid;
+                    box-shadow: 0 0 10px 0 var(--color-primary);
                 }
             }
         }
