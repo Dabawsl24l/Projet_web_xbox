@@ -70,6 +70,32 @@ header {
                 border-radius: 50%;
                 background: rgba(0, 0, 0, 0.3);
                 padding: 10px;
+                position: relative;
+
+                .stroke {
+                    align-items: center;
+                    transition: all 0.4s ease-in;
+                }
+
+                .fill {
+                    position: absolute;
+                    top: 7px;
+                    left: 8px;
+                    width: 70%;
+                    height: 70%;
+                    opacity: 0;
+                    transition: all 0.4s ease-in;
+                }
+
+                &:hover {
+                    .fill {
+                        opacity: 1;
+                    }
+
+                    .stroke {
+                        opacity: 0;
+                    }
+                }
             }
         }
     }
