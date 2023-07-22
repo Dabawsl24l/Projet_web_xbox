@@ -4,9 +4,9 @@
    Les éléments de la page vont hérités des propriétés inscrite dans body
    ========================================================================== */
 body {
-    background: url('/assets/images/background_skyrim.jpg') no-repeat;
+    background: url('/assets/images/theme_base.png') no-repeat black;
     background-size: cover;
-    background-position: left 5%;
+    background-position: bottom;
     color: var(--color-white);
     font-family: var(--font-secondary);
     font-size: var(--font-size-content);

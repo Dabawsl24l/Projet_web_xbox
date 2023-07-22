@@ -1,0 +1,115 @@
+.rectangles__categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .rectangle__card {
+        width: 398px;
+        height: 240px;
+        overflow: hidden;
+        border-radius: 15px;
+        position: relative;
+
+        .media__rectangle {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.3s ease-in;
+            }
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+
+            .manette__stroke {
+                opacity: 0;
+                transition: all 0.3s ease-in;
+            }
+
+            .manette__fill {
+                opacity: 1;
+                transition: all 0.3s ease-in;
+            }
+        }
+
+        &:not(:hover) {
+            .manette__fill {
+                transition: all 0.3s ease-in;
+                opacity: 0;
+            }
+            .manette__stroke {
+                transition: all 0.3s ease-in;
+                opacity: 1;
+            }
+        }
+    }
+
+    .content__rectangle {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+
+        .manette {
+            position: relative;
+
+            .manette__stroke,
+            .manette__fill {
+                position: absolute;
+                top: -50%;
+                left: 50%;
+                transform: translate(-50%, -50%) translateY(-88px);
+            }
+        }
+
+        .gamepass__content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: absolute;
+            padding: 5px;
+            top: -100%;
+            transform: translateY(-130px);
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .rectangle__neon {
+        position: relative;
+        &::after {
+            position: absolute;
+            width: 420px;
+            height: 259.84px;
+            border: transparent 6px solid;
+            border-radius: 15px;
+            content: '';
+            top: -10px;
+            left: -12px;
+            box-shadow: 0 0 10px 0 transparent;
+            opacity: 0;
+            transition: all 0.4s ease-in;
+            pointer-events: none;
+        }
+
+        &:focus::after,
+        &:hover::after {
+            opacity: 1;
+            border: var(--color-primary) 6px solid;
+            box-shadow: 0 0 10px 0 var(--color-primary);
+            pointer-events: none;
+            top: -10px;
+            left: -12px;
+            transition: all 0.3s ease-in;
+        }
+    }
+}
+
+.autres__categories {
+    margin-bottom: 50px;
+}

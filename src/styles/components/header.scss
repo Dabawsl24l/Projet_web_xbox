@@ -9,6 +9,7 @@ header {
         display: flex;
         align-items: center;
         gap: 15px;
+        position: relative;
 
         .gamertag {
             display: flex;
@@ -24,6 +25,10 @@ header {
             svg {
                 margin-bottom: 4px;
             }
+        }
+
+        .info__gaming {
+            opacity: 1;
         }
     }
     .gamerpic {
@@ -151,4 +156,18 @@ header {
             letter-spacing: 3.5px;
         }
     }
+
+    .info__personnel {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 70px;
+        gap: 14px;
+        opacity: 0;
+        bottom: 5px;
+    }
+}
+
+footer {
+    text-align: center;
 }
