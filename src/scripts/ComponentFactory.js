@@ -1,10 +1,14 @@
 import TransitionNom from './components/TransitionNom';
+import Heure from './components/Heure';
+import Background from './components/Background';
 
 /** Composante ComponentFactory */
 export default class ComponentFactory {
   constructor() {
     this.componentList = {
       TransitionNom,
+      Heure,
+      Background,
     };
     // initalise la composante ComponentFactory
     this.init();
