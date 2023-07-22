@@ -1,4 +1,6 @@
 header {
+    top: 0;
+    position: sticky;
     margin-top: 25px;
     .wrapper {
         display: flex;
@@ -29,6 +31,7 @@ header {
 
         .info__gaming {
             opacity: 1;
+            transition: all 0.5s ease-in;
         }
     }
     .gamerpic {
@@ -165,6 +168,7 @@ header {
         gap: 14px;
         opacity: 0;
         bottom: 5px;
+        transition: all 0.5s ease-in;
     }
 }
 

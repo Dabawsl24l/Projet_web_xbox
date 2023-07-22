@@ -1,10 +1,10 @@
-import Carousel from './components/Carousel';
+import TransitionNom from './components/TransitionNom';
 
 /** Composante ComponentFactory */
 export default class ComponentFactory {
   constructor() {
     this.componentList = {
-      Carousel,
+      TransitionNom,
     };
     // initalise la composante ComponentFactory
     this.init();
