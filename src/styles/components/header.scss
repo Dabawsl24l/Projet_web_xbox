@@ -1,7 +1,24 @@
 header {
     top: 0;
     position: sticky;
-    margin-top: 25px;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.55) 65%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.55) 65%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.55) 65%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    padding-top: 25px;
+
     .wrapper {
         display: flex;
         justify-content: space-between;

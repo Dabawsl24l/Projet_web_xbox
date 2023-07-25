@@ -6,13 +6,7 @@
 body {
     transform-origin: center;
     transition: all 0.4s ease-in-out;
-    background: url('/assets/images/theme_base.png') no-repeat
-        linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(0, 0, 0, 0.8576680672268908) 23%,
-            rgba(255, 255, 255, 0.49352240896358546) 100%
-        );
+    background: url('/assets/images/theme_base.png') no-repeat;
     background-size: cover;
     background-position: bottom;
     color: var(--color-white);
